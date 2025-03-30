@@ -77,24 +77,36 @@ const FormBuilder = () => {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 pb-6">
-                <div className="w-full md:w-7/12">
-                    <div className="bg-white p-6 rounded shadow-xl">
-                        <input
-                            type="text"
-                            value={formTitle}
-                            onChange={(e) => setFormTitle(e.target.value)}
-                            className="w-full mb-6 text-xl font-medium border-b border-gray-300 pb-2 focus:outline-none focus:border-blue-500"
-                        />
-
-
-                        {fields.map((field) => (
-                            <FormField
-                                key={field.id}
-                                label={field.label}
-                                placeholder={field.placeholder}
+                <div className="w-full md:w-7/12" >
+                    <div
+                        className="bg-white p-6 rounded shadow-xl"
+                        style={{
+                            backgroundColor: formSettings.backgroundColor,
+                        }}
+                    >
+                        <div
+                        className={`${formSettings.backgroundColor === "#000000" ? 'text-white' : ''}`}
+                            style={{
+                                fontFamily: formSettings.fontFamily
+                            }}
+                        >
+                            <input
+                                type="text"
+                                value={formTitle}
+                                onChange={(e) => setFormTitle(e.target.value)}
+                                className="w-full mb-6 bg-transparent text-xl font-medium border-b border-gray-300 pb-2 focus:outline-none focus:border-black"
                             />
-                        ))}
 
+
+                            {fields.map((field) => (
+                                <FormField
+                                    key={field.id}
+                                    label={field.label}
+                                    placeholder={field.placeholder}
+                                    showLabel={formSettings.showLabels}
+                                />
+                            ))}
+                        </div>
                         <div className="mt-6">
                             <AddFieldMenu onAddField={addField} />
                         </div>

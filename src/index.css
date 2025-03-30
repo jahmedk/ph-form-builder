@@ -3,6 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 .sidebar {
     background-color: var(--color-sidebar-bg);
     color: var(--color-text-sidebar);
@@ -19,7 +21,7 @@
 
 .form-field {
     border-color: var(--color-input-border);
-    background-color: var(--color-input-bg);
+    background-color: transparent;
 }
 
 .form-field:focus {

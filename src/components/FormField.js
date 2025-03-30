@@ -2,13 +2,15 @@
 import React from 'react';
 import { MoreVertical } from 'lucide-react';
 
-const FormField = ({ label, type = "text", placeholder }) => {
+const FormField = ({ label, type = "text", showLabel = true, placeholder }) => {
   return (
     <div className="mb-5">
-      <label className="block mb-2">{label}</label>
+      {showLabel && (
+        <label className="block mb-2">{label}</label>
+      )}
       <div className="flex">
-        <input 
-          type={type} 
+        <input
+          type={type}
           placeholder={placeholder}
           className="form-field w-full p-2 border border-gray-300 rounded"
         />
