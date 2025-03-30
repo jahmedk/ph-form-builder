@@ -1,0 +1,29 @@
+:root {
+  /* Base colors */
+  --color-primary: #0077cc;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #6c757d;
+  --color-success: #28a745;
+  --color-danger: #dc3545;
+  --color-warning: #ffc107;
+  --color-info: #17a2b8;
+  
+  /* Background colors */
+  --color-background: #ffffff;
+  --color-sidebar-bg: #0e1623;
+  --color-content-bg: #f0f2f6;
+  
+  /* Text colors */
+  --color-text: #212529;
+  --color-text-light: #6c757d;
+  --color-text-sidebar: #ffffff;
+  
+  /* Border colors */
+  --color-border: #dee2e6;
+  --color-border-light: #e9ecef;
+  
+  /* Form colors */
+  --color-input-bg: #ffffff;
+  --color-input-border: #ced4da;
+  --color-input-focus-border: #80bdff;
+}

@@ -1,0 +1,31 @@
+@import './styles/variables.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sidebar {
+    background-color: var(--color-sidebar-bg);
+    color: var(--color-text-sidebar);
+}
+
+.content-area {
+    background-color: var(--color-content-bg);
+}
+
+.primary-button {
+    background-color: var(--color-primary);
+    color: var(--color-primary-foreground);
+}
+
+.form-field {
+    border-color: var(--color-input-border);
+    background-color: var(--color-input-bg);
+}
+
+.form-field:focus {
+    border-color: var(--color-input-focus-border);
+}
+
+.bg-sidebar {
+    background-color: var(--color-sidebar-bg);
+}
