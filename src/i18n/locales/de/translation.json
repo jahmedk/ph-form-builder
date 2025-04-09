@@ -1,0 +1,36 @@
+{
+    "sidebar": {
+        "myForms": "Meine Formulare",
+        "analytics": "Analytik",
+        "knowledgeBase": "Wissensdatenbank",
+        "helpSupport": "Hilfe & Support",
+        "myProfile": "Mein Profil",
+        "logout": "Abmelden"
+    },
+    "form": {
+        "createTitle": "Neues Formular erstellen",
+        "breadcrumbHome": "Meine Formulare",
+        "breadcrumbCreate": "Neues Formular erstellen",
+        "untitled": "Unbenanntes Formular",
+        "firstName": "Vorname",
+        "lastName": "Nachname",
+        "addNewField": "Neues Feld hinzufügen",
+        "search": "Suchen...",
+        "publish": "Formular veröffentlichen",
+        "fieldTypes": {
+            "text": "Textfeld",
+            "button": "Schaltfläche",
+            "dropdown": "Dropdown",
+            "radio": "Optionsfeld",
+            "checkbox": "Kontrollkästchen",
+            "switchOption": "Option wechseln"
+        }
+    },
+    "settings": {
+        "backgroundColor": "Hintergrundfarbe",
+        "fontFamily": "Schriftfamilie",
+        "formLabels": "Formular Beschriftungen",
+        "labelsOn": "Aktiviert",
+        "labelsOff": "Ausgeschaltet"
+    }
+}

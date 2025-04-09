@@ -1,7 +1,12 @@
-
 import React from 'react';
 
-const ColorPicker = ({ colors, selectedColor, onChange }) => {
+interface ColorPickerProps {
+  colors: string[];
+  selectedColor: string;
+  onChange: (color: string) => void;
+}
+
+const ColorPicker: React.FC<ColorPickerProps> = ({ colors, selectedColor, onChange }) => {
   return (
     <div className="flex flex-wrap gap-4 mt-2">
       {colors.map((color) => (

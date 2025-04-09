@@ -1,0 +1,35 @@
+{
+    "sidebar": {
+        "formBuilder": "Form Builder",
+        "myForms": "My Forms",
+        "analytics": "Analytics",
+        "knowledgeBase": "Knowledge Base",
+        "helpSupport": "Help & Support",
+        "myProfile": "My Profile",
+        "logout": "Logout"
+    },
+    "form": {
+        "createTitle": "Create New Form",
+        "untitled": "Untitled Form",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "addNewField": "Add New Field",
+        "search": "Search...",
+        "publish": "Publish Form",
+        "fieldTypes": {
+            "text": "Text field",
+            "button": "Button",
+            "dropdown": "Dropdown",
+            "radio": "Radio button",
+            "checkbox": "Checkbox",
+            "switchOption": "Switch Option"
+        }
+    },
+    "settings": {
+        "backgroundColor": "Background Color",
+        "fontFamily": "Font Family",
+        "formLabels": "Form Labels",
+        "labelsOn": "Turned ON",
+        "labelsOff": "Turned OFF"
+    }
+}

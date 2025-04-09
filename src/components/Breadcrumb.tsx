@@ -1,8 +1,16 @@
-
 import React from 'react';
 import { ChevronsRight } from 'lucide-react';
 
-const Breadcrumb = ({ items }) => {
+interface BreadcrumbItem {
+  label: string;
+  href: string;
+}
+
+interface BreadcrumbProps {
+  items: BreadcrumbItem[];
+}
+
+const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
   return (
     <nav className="flex" aria-label="Breadcrumb">
       <ol className="inline-flex items-center space-x-1">
@@ -12,7 +20,7 @@ const Breadcrumb = ({ items }) => {
               <ChevronsRight size={16} className="text-gray-400 mx-1" />
             )}
             <a
-              href={index === items.length - 1 ? null : item.href}
+              href={index === items.length - 1 ? undefined : item.href}
               className={`inline-flex items-center text-sm ${index === items.length - 1
                 ? 'text-gray-600 hover:text-gray-800'
                 : 'text-blue-500 underline'

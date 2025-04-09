@@ -1,8 +1,19 @@
-
 import React from 'react';
 import { MoreVertical } from 'lucide-react';
 
-const FormField = ({ label, type = "text", showLabel = true, placeholder }) => {
+interface FormFieldProps {
+  label: string;
+  type?: string;
+  showLabel?: boolean;
+  placeholder?: string;
+}
+
+const FormField: React.FC<FormFieldProps> = ({ 
+  label, 
+  type = "text", 
+  showLabel = true, 
+  placeholder 
+}) => {
   return (
     <div className="mb-5">
       {showLabel && (

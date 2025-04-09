@@ -1,25 +1,35 @@
-
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Search, Plus } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
-const fieldOptions = [
-    { name: 'Text field', value: 'text' },
-    { name: 'Button', value: 'button' },
-    { name: 'Dropdown', value: 'dropdown' },
-    { name: 'Radio button', value: 'radio' },
-    { name: 'Checkbox', value: 'checkbox' },
-    { name: 'Switch option', value: 'switch' },
-];
+interface FieldOption {
+    name: string;
+    value: string;
+}
 
-const AddFieldMenu = ({ onAddField }) => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [searchQuery, setSearchQuery] = useState('');
-    const menuRef = useRef();
-    const btnRef = useRef();
+interface AddFieldMenuProps {
+    onAddField: (fieldType: string) => void;
+}
 
-    const handleClickOutside = useCallback((event) => {
-        const isButtonClicked = btnRef.current?.contains(event.target);
-        const isMenuClicked = menuRef.current?.contains(event.target);
+const AddFieldMenu: React.FC<AddFieldMenuProps> = ({ onAddField }) => {
+    const { t } = useTranslation();
+    const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [searchQuery, setSearchQuery] = useState<string>('');
+    const menuRef = useRef<HTMLDivElement>(null);
+    const btnRef = useRef<HTMLButtonElement>(null);
+
+    const fieldOptions: FieldOption[] = [
+        { name: t("form.fieldTypes.text"), value: 'text' },
+        { name: t("form.fieldTypes.button"), value: 'button' },
+        { name: t("form.fieldTypes.dropdown"), value: 'dropdown' },
+        { name: t("form.fieldTypes.radio"), value: 'radio' },
+        { name: t("form.fieldTypes.checkbox"), value: 'checkbox' },
+        { name: t("form.fieldTypes.switchOption"), value: 'switch' },
+    ];
+
+    const handleClickOutside = useCallback((event: MouseEvent) => {
+        const isButtonClicked = btnRef.current?.contains(event.target as Node);
+        const isMenuClicked = menuRef.current?.contains(event.target as Node);
 
         // Close menu only if:
         // 1. The button wasn't clicked (to allow toggle behavior)
@@ -33,15 +43,14 @@ const AddFieldMenu = ({ onAddField }) => {
     useEffect(() => {
         if (!isOpen) return;
 
-
         document.addEventListener("mousedown", handleClickOutside);
 
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
         };
-    }, [isOpen]);
+    }, [isOpen, handleClickOutside]);
 
-    const toggleMenu = () => {
+    const toggleMenu = (): void => {
         setIsOpen(!isOpen);
     };
 
@@ -54,10 +63,10 @@ const AddFieldMenu = ({ onAddField }) => {
             <button
                 ref={btnRef}
                 onClick={toggleMenu}
-                className="w-48 border border-dashed border-blue-400 text-blue-500 p-3 rounded flex items-center justify-center hover:bg-blue-50"
+                className="border border-dashed border-blue-400 text-blue-500 p-3 rounded flex items-center justify-center hover:bg-blue-50"
             >
                 <Plus size={18} className="mr-2" />
-                Add New Field
+                {t("form.addNewField")}
             </button>
 
             {isOpen && (

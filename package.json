@@ -3,16 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@headlessui/react": "^2.2.1",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.1",
+    "flag-icons": "^7.3.2",
+    "i18next": "^24.2.3",
     "lucide-react": "^0.485.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-i18next": "^15.4.1",
     "react-router-dom": "^7.4.1",
     "react-scripts": "^5.0.1",
     "sass": "^1.86.0",
+    "typescript": "^5.8.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -40,6 +49,8 @@
     ]
   },
   "devDependencies": {
+    "@types/i18next": "^13.0.0",
+    "@types/react-router-dom": "^5.3.3",
     "autoprefixer": "^10.4.15",
     "postcss": "^8.4.29",
     "tailwindcss": "^3.3.3"
