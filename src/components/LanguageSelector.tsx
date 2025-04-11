@@ -46,7 +46,7 @@ const LanguageSelector: React.FC = () => {
                                     }`
                                 }
                             >
-                                {({ selected }) => (
+                                {() => (
                                     <div className="flex items-center gap-2">
                                         <span className={`fi fi-${lang.flag}`} title={lang.label}></span>
                                         <span>{lang.label}</span>

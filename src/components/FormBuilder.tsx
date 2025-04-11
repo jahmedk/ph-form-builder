@@ -27,12 +27,12 @@ interface BreadcrumbItem {
 
 const FormBuilder: React.FC = () => {
     const { t } = useTranslation();
-    const [formTitle, setFormTitle] = useState < string > (t("form.untitled"));
-    const [fields, setFields] = useState < Field[] > ([
+    const [formTitle, setFormTitle] = useState<string>(t("form.untitled"));
+    const [fields, setFields] = useState<Field[]>([
         { id: 1, type: 'text', label: 'First Name', placeholder: 'John' },
         { id: 2, type: 'text', label: 'Last Name', placeholder: 'Doe' }
     ]);
-    const [formSettings, setFormSettings] = useState < FormSettings > ({
+    const [formSettings, setFormSettings] = useState<FormSettings>({
         backgroundColor: '#ffffff',
         fontFamily: 'Roboto',
         showLabels: true
@@ -77,7 +77,7 @@ const FormBuilder: React.FC = () => {
     };
 
     useEffect(() => {
-        const handleLanguageChange = (lng: string): void => {
+        const handleLanguageChange = (): void => {
             setFormTitle(t("form.untitled"));
         };
 
